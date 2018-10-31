@@ -1,0 +1,15 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<h1>All our flats ( <%= @flats.count %> )</h1>
+
+
+<% @flats.each do |flat| %>
+
+<div class = 'card-flat'>
+  <h2> <%= flat.name %> </h2>
+  <h3><%= flat.address %> </h3>
+  <h5><i class="material-icons">attach_money</i><%= flat.price_per_night %> </h5>
+  <h5><i class="material-icons">account_box</i> <%= flat.number_of_guests %></h5>
+</div>
+
+<% end %>
